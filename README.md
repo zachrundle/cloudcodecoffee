@@ -22,7 +22,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-CloudCodeCoffee is going to be a blogging page that I hosted within AWS. The following AWS services will be used:
+[CloudCodeCoffee](https://cloudcodecoffee.com) is a blog site that I host using the following AWS services:
 - S3 (static site feature)
 - CloudFront to sit in front to provide static content caching, an extra layer of security, and most importantly HTTPS access to the S3 bucket
 - ACM to issue SSL certificate to support HTTPS

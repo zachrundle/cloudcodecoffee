@@ -33,7 +33,7 @@ CloudCodeCoffee is going to be a blogging page that I hosted within AWS. The fol
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Build infrastructure for blog (S3, CloudFront, Route53, ACM) using Terraform
+- [ ] Build infrastructure for blog (S3, CloudFront, ACM, Route53) using Terraform
 - [ ] Utilize existing templates for HTML, CSS, and JS code for blog hosted on S3 static site
 - [ ] Start publishing blogs!
     - [ ] AWS 
@@ -62,6 +62,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [license-shield]: https://img.shields.io/github/license/zachrundle/cloudcodecoffee.svg?style=for-the-badge
 [license-url]: https://github.com/zachrundle/cloudcodecoffee/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/zachrundle
+[linkedin-url]: https://linkedin.com/in/zach-rundle
 [product-screenshot]: images/screenshot.png
 

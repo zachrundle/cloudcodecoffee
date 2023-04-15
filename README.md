@@ -30,11 +30,6 @@ CloudCodeCoffee is going to be a blogging page that I hosted within AWS. The fol
 - Route53 to create appropriate DNS records 
 
 
-
-
-
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -56,16 +51,16 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/zachrundle/cloudecodecoffee.svg?style=for-the-badge
-[contributors-url]: https://github.com/zachrundle/cloudecodecoffee/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/zachrundle/cloudecodecoffee.svg?style=for-the-badge
-[forks-url]: https://github.com/zachrundle/cloudecodecoffee/network/members
-[stars-shield]: https://img.shields.io/github/stars/zachrundle/cloudecodecoffee.svg?style=for-the-badge
-[stars-url]: https://github.com/zachrundle/cloudecodecoffee/stargazers
-[issues-shield]: https://img.shields.io/github/issues/zachrundle/cloudecodecoffee.svg?style=for-the-badge
-[issues-url]: https://github.com/zachrundle/cloudecodecoffee/issues
-[license-shield]: https://img.shields.io/github/license/zachrundle/cloudecodecoffee.svg?style=for-the-badge
-[license-url]: https://github.com/zachrundle/cloudecodecoffee/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/zachrundle/cloudcodecoffee.svg?style=for-the-badge
+[contributors-url]: https://github.com/zachrundle/cloudcodecoffee/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/zachrundle/cloudcodecoffee.svg?style=for-the-badge
+[forks-url]: https://github.com/zachrundle/cloudcodecoffee/network/members
+[stars-shield]: https://img.shields.io/github/stars/zachrundle/cloudcodecoffee.svg?style=for-the-badge
+[stars-url]: https://github.com/zachrundle/cloudcodecoffee/stargazers
+[issues-shield]: https://img.shields.io/github/issues/zachrundle/cloudcodecoffee.svg?style=for-the-badge
+[issues-url]: https://github.com/zachrundle/cloudcodecoffee/issues
+[license-shield]: https://img.shields.io/github/license/zachrundle/cloudcodecoffee.svg?style=for-the-badge
+[license-url]: https://github.com/zachrundle/cloudcodecoffee/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/zachrundle
 [product-screenshot]: images/screenshot.png

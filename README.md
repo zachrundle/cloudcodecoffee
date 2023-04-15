@@ -32,7 +32,7 @@ CloudCodeCoffee is going to be a blogging page that I hosted within AWS. The fol
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Build infrastructure for blog (S3, CloudFront, ACM, Route53) using Terraform
+- [x] Build infrastructure for blog (S3, CloudFront, ACM, Route53) using Terraform
 - [ ] Utilize existing templates for HTML, CSS, and JS code for blog hosted on S3 static site
 - [ ] Start publishing blogs!
     - [ ] AWS 

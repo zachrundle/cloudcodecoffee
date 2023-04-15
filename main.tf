@@ -99,9 +99,9 @@ resource "aws_route53_record" "ccc" {
 }
 
 # create alias record for www
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "wildcard" {
   zone_id = aws_route53_zone.ccc.zone_id
-  name    = join(".", ["www", local.domain])
+  name    = join(".", ["*", local.domain])
   type    = "A"
 
   alias {
@@ -110,6 +110,7 @@ resource "aws_route53_record" "www" {
     evaluate_target_health = false
   }
 }
+
 
 # ----- CloudFront -----
 # using CloudFront to not only cache static content but to provide HTTPS access to S3 bucket
@@ -134,6 +135,7 @@ resource "aws_cloudfront_distribution" "ccc" {
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
+  aliases = [local.domain, "*.${local.domain}"]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
@@ -168,7 +170,6 @@ resource "aws_cloudfront_distribution" "ccc" {
     response_code         = 403
     response_page_path    = "/error.html"
   }
-
   # this is the cheapest option which includes NA and EU regions only
   price_class = "PriceClass_100"
 
@@ -181,17 +182,18 @@ resource "aws_cloudfront_distribution" "ccc" {
 
   viewer_certificate {
     cloudfront_default_certificate = true
-    #acm_certificate_arn = "aws_acm_certificate.cert.arn"
-    #ssl_support_method = "sni-only"
-    #minimum_protocol_version = "TLSv1"
+    acm_certificate_arn            = aws_acm_certificate_validation.ccc.certificate_arn
+    ssl_support_method             = "sni-only"
+    minimum_protocol_version       = "TLSv1"
   }
-}
 
+}
 # ----- ACM -----
 # create certificate
 resource "aws_acm_certificate" "cert" {
-  domain_name       = local.domain
-  validation_method = "DNS"
+  domain_name               = local.domain
+  subject_alternative_names = ["*.${local.domain}"]
+  validation_method         = "DNS"
 
 
   lifecycle {
@@ -199,7 +201,7 @@ resource "aws_acm_certificate" "cert" {
   }
 }
 
-# this will create teh appropriate DNS record for validation
+# this will create the appropriate DNS record(s) for validation
 resource "aws_route53_record" "cert" {
   for_each = {
     for dvo in aws_acm_certificate.cert.domain_validation_options : dvo.domain_name => {
@@ -214,13 +216,10 @@ resource "aws_route53_record" "cert" {
   records         = [each.value.record]
   ttl             = 60
   type            = each.value.type
-  zone_id         = data.aws_route53_zone.ccc.zone_id
-  #zone_id         = aws_route53_zone.ccc.zone_id
-
+  zone_id = aws_route53_zone.ccc.zone_id
 }
-/*
+
 resource "aws_acm_certificate_validation" "ccc" {
   certificate_arn         = aws_acm_certificate.cert.arn
   validation_record_fqdns = [for record in aws_route53_record.cert : record.fqdn]
 }
-*/

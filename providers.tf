@@ -1,17 +1,17 @@
 provider "aws" {
-  region = var.region
+  region              = var.region
   allowed_account_ids = [var.aws_account]
 
 
-assume_role {
-    role_arn = "arn:aws:iam::${var.aws_account}:role/svc_terraform"
+  assume_role {
+    role_arn     = "arn:aws:iam::${var.aws_account}:role/svc_terraform"
     session_name = "Terraform"
-}
+  }
 
   default_tags {
     tags = {
-        created_by = "terraform"
-        workspace = terraform.workspace
+      created_by = "terraform"
+      name       = terraform.workspace
     }
   }
 }

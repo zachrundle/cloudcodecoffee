@@ -28,11 +28,13 @@
 - ACM to issue SSL certificate to support HTTPS
 - Route53 to create appropriate DNS records 
 
+![Architecture](architecture.png)
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Build infrastructure for blog (S3, CloudFront, ACM, Route53) using Terraform
+- [x] Build basic infrastructure for blog (S3, CloudFront, ACM, Route53) using Terraform
+- [ ] Build CI/CD pipeline using CodePipeline and CodeBuild
 - [ ] Utilize existing templates for HTML, CSS, and JS code for blog hosted on S3 static site
 - [ ] Start publishing blogs!
     - [ ] AWS 

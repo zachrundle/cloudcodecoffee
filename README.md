@@ -26,7 +26,8 @@
 - S3 (static site feature)
 - CloudFront to sit in front to provide static content caching, an extra layer of security, and most importantly HTTPS access to the S3 bucket
 - ACM to issue SSL certificate to support HTTPS
-- Route53 to create appropriate DNS records 
+- Route53 to create appropriate DNS records
+- CD using CodePipeline and CodeBuild (coming soon) 
 
 ![Architecture](architecture.png)
 
